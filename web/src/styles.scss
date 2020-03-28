@@ -6,6 +6,7 @@
 * {
     font-family: Work Sans, sans-serif;
     color: $font-color-title;
+    font-weight: 400;
 }
 
 body {
@@ -25,7 +26,7 @@ i {
 
 h2 {
   font-size: 30px;
-  font-weight: 400;
+  margin: 1rem 0 2rem;
 }
 
 header, footer {
