@@ -13,6 +13,7 @@ $size-big: 200px;
 .header-common {
     position: relative;
     z-index: 1051;
+    @include body-padding-mixin;
 }
 
 nav {

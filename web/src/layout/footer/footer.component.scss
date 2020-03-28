@@ -2,6 +2,8 @@
 @import 'src/assets/scss/_mixins.scss';
 
 footer {
+    @include body-padding-mixin;
+
     * {
         display: inline-block;
     }

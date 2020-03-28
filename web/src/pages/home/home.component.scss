@@ -8,20 +8,27 @@
 }
 
 .portrait {
-    width: calc(100vw * 1 / 3);
-    height: 100%;
+    width: 40vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
-#portrait-image {
-    background-image: url("/src/assets/images/selfie.jpeg");
-    width: calc(100vw * 1 / 3);
-    transform: rotate(90deg);
+#selfie {
+    background-image: url('src/assets/images/selfie.jpeg');
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
 }
 
 .content {
-    width: calc(100vw * 2 / 3);
     display: table;
-    height: 100%;
+    width: 60vw;
+    height: 100vh;
 }
 
 .content-center {
@@ -29,17 +36,38 @@
     width: 100%;
     position: relative;
     vertical-align: middle;
-    padding-left: 3vw;
-    padding-right: 3vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
 }
 
 .text {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin: 40px auto;
     max-width: 640px!important;
     line-height: 1.8em;
 }
 
 @media only screen and (max-width: $screen-size-small) {
+    .container {
+        display: block;
+    }
 
+    .portrait {
+        display: table;
+        width: 100%;
+        height: auto;
+        min-height: 35vh;
+    }
+
+    #selfie {
+        min-height: 35vh;
+        background-position: 50% 35%;
+    }
+
+    .content {
+        display: table;
+        width: 100%;
+        height: auto;
+        min-height: 65vh;
+        @include center-all-mixin;
+    }
 }
