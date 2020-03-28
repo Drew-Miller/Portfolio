@@ -1,0 +1,24 @@
+@import 'src/assets/scss/_variables.scss';
+@import 'src/assets/scss/_mixins.scss';
+
+footer {
+    * {
+        display: inline-block;
+    }
+}
+
+p, a {
+    font-size: $font-size-med;
+    color: $font-color-light;
+}
+
+.footer-item {
+    cursor: pointer;
+    padding-left: 15px;
+}
+
+@media only screen and (max-width: $screen-size-small) {
+    footer {
+        @include center-all-mixin;
+    }
+}

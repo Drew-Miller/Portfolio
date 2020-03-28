@@ -1,1 +1,22 @@
-<h2>Header</h2>
+<header class="header-spacing">
+    <div class="header-common">
+        <div class="header-logo">
+            <img id="logo" src="assets/images/logo.jpeg" />
+        </div>
+        <nav class="center-vertical">
+            <ul *ngFor="let item of NavItems">
+                <li>
+                    <a [href]="item.Link"
+                        [class.curr-active-link]="item.Link === CurrentRoute">
+                        {{ item.Title }}
+                    </a>
+                </li>
+                <li>
+                    <span style="color: rgb(216, 216, 216);">•</span>
+                </li>
+            </ul>
+            <socials></socials>
+        </nav>
+        <div class="clearfix"></div>
+    </div>
+</header>

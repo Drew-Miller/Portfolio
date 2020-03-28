@@ -1,0 +1,47 @@
+@import 'src/assets/scss/_variables.scss';
+@import 'src/assets/scss/_mixins.scss';
+
+$size-big: 200px;
+
+.header-spacing {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-right: 0%;
+    padding-left: 0%;
+}
+
+.header-common {
+    position: relative;
+    z-index: 1051;
+}
+
+nav {
+    height: $size-big;
+    max-width: 75%;
+    float: right;
+}
+
+.header-logo {
+    float: left;
+    width: $size-big;
+}
+
+#logo {
+    height: $size-big;
+    width: $size-big;
+}
+
+.curr-active-link {
+    color: #{$font-color-dark}!important;
+}
+
+@media only screen and (max-width: $screen-size-small) {
+    nav, .header-logo {
+        float: none;
+        margin: auto;
+    }
+
+    nav {
+        @include center-all-mixin;
+    }
+}

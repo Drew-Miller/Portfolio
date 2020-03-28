@@ -1,6 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(http://fonts.googleapis.com/css?family=Work+Sans);
+@import 'src/assets/scss/_variables.scss';
+@import 'src/assets/scss/_mixins.scss';
 
 * {
     font-family: Work Sans, sans-serif;
+    color: $font-color-title;
+}
+
+body {
+  padding-left: 3vw;
+  padding-right: 3vw;
+  margin: 0px;
+}
+
+p {
+  font-size: $font-size-med;
+  color: $font-color-p;
+}
+
+i {
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+header, footer {
+    display: block;
+    position: static;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    position: relative;
+    display: flex;
+}
+
+li {
+    margin: 0 2px;
+}
+
+a, span {
+    padding: 8px .5em 9px;
+    margin: 0;
+    font-size: 12px;
+    color: $font-color-light;
+    fill: $font-color-light;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.center-vertical {
+    @include center-vertical-mixin;
+}
+
+.center-all {
+  @include center-all-mixin;
 }
