@@ -13,16 +13,16 @@ export class HeaderComponent {
         { Title: 'About', Link: '/home' },
         { Title: 'Projects', Link: '/projects' },
         { Title: 'Contact Me', Link: '/contact' }
-    ]
+    ];
 
-    public constructor(private route: Router, private configService: ConfigurationService) { }
+    public constructor(private router: Router) { }
 
-    public get CurrentRoute(): string {
-        return this.route.url;
+    public Navigate(path: string) {
+        this.router.navigateByUrl(path);
     }
 
-    public get Base(): string {
-        return this.configService.Base;
+    public get CurrentRoute(): string {
+        return this.router.url;
     }
 }
 

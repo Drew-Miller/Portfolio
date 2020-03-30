@@ -6,13 +6,4 @@ export class ConfigurationService {
     public constructor() {
         ConfigurationService.Env = environment;
     }
-
-    public get Base(): string {
-        const base = ConfigurationService.Env.Base;
-        if (base) {
-            return base + '/';
-        } else {
-            return '';
-        }
-    }
 }
