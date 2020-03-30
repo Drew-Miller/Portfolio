@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ConfigurationService } from 'src/shared/shared.services';
-
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',

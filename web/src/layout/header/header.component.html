@@ -6,7 +6,7 @@
         <nav class="center-vertical">
             <ul *ngFor="let item of NavItems">
                 <li>
-                    <a (click)="Navigate(item.Link)"
+                    <a [href]="item.Link"
                         [class.curr-active-link]="item.Link === CurrentRoute">
                         {{ item.Title }}
                     </a>
