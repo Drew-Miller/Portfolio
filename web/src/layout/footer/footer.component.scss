@@ -22,5 +22,16 @@ p, a {
 @media only screen and (max-width: $screen-size-small) {
     footer {
         @include center-all-mixin;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: $screen-size-mobile) {
+    footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer-item {
+        padding-left: 0px;
     }
 }

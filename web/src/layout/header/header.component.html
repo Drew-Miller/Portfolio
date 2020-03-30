@@ -4,7 +4,8 @@
             <img id="logo" src="assets/images/logo.jpeg" />
         </div>
         <nav class="center-vertical">
-            <ul *ngFor="let item of NavItems">
+            <ul>
+                <ng-container *ngFor="let item of NavItems">
                 <li>
                     <a (click)="Navigate(item.Link)"
                         [class.curr-active-link]="item.Link === CurrentRoute">
@@ -14,6 +15,7 @@
                 <li>
                     <span style="color: rgb(216, 216, 216);">•</span>
                 </li>
+                </ng-container>
             </ul>
             <socials></socials>
         </nav>

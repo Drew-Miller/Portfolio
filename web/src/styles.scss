@@ -54,6 +54,7 @@ ul {
     list-style-type: none;
     position: relative;
     display: flex;
+    text-align: left;
 }
 
 li {
@@ -83,4 +84,18 @@ a, span {
 
 .center-all {
   @include center-all-mixin;
+}
+
+@media only screen and (max-width: $screen-size-small) {
+  ul {
+    display: flex;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: $screen-size-mobile) {
+    ul {
+      display: block;
+      text-align: center;
+    }
 }

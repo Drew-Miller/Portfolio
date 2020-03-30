@@ -46,3 +46,9 @@ nav {
         @include center-all-mixin;
     }
 }
+
+@media only screen and (max-width: $screen-size-mobile) {
+    nav {
+        flex-direction: column;
+    }
+}
