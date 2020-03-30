@@ -7,7 +7,8 @@
     "build": "ng build --prod --base-href /Porfolio/",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "update": "npm run build; git add . ../docs/; git commit -m 'updating'; git push origin master"
   },
   "private": true,
   "dependencies": {
