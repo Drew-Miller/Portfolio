@@ -20,6 +20,7 @@ p {
 
 i {
   cursor: pointer;
+  color: $font-color-p;
 }
 
 h2 {
@@ -72,6 +73,22 @@ a, span {
 .body-margin {
   padding-left: 3vw;
   padding-right: 3vw;
+}
+
+.content {
+  display: table;
+  width: 60vw;
+  height: 100vh;
+  margin: auto;
+}
+
+.content-center {
+  display: table-cell;
+  width: 100%;
+  position: relative;
+  vertical-align: middle;
+  padding-left: 4vw;
+  padding-right: 4vw;
 }
 
 .clearfix {

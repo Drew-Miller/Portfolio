@@ -1,0 +1,22 @@
+<form [formGroup]="Form" (ngSubmit)="FormSubmit()">
+    <div class="field-wrapper">
+        <label class="title">Name *</label>
+        <div class="form-field field-left">
+            <input type="text" formControlName="FirstName" class="field-element">
+            <label class="sub-label">First Name</label>
+        </div>
+        <div class="form-field field-right">
+            <input type="text" formControlName="LastName" class="field-element">
+            <label class="sub-label">Last Name</label>
+        </div>
+    </div>
+    <div class="form-field">
+        <label class="title">Email *</label>
+        <input type="text" formControlName="Email" class="field-element">
+    </div>
+    <div class="form-field">
+        <label class="title">Message: *</label>
+        <textarea formControlName="Message" class="field-element"></textarea>
+    </div>
+    <button type="submit">Submit</button>
+</form>
