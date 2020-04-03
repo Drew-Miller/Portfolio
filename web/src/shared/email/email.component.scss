@@ -1,6 +1,10 @@
 @import 'src/assets/scss/_variables.scss';
 @import 'src/assets/scss/_mixins.scss';
 
+:host {
+    display: block;
+}
+
 input {
     display: block;
 }
@@ -77,13 +81,15 @@ input[type=text] {
     vertical-align: middle;
 }
 
-input[type=text]:focus {
-    outline: none;
-}
-
 textarea {
     min-height: 100px;
     resize: vertical;
+}
+
+input[type=text]:focus,
+textarea:focus,
+button[type=submit]:focus {
+    outline: none;
 }
 
 @media only screen and (max-width: $screen-size-small) {

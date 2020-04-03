@@ -1,4 +1,4 @@
-<form [formGroup]="Form" (ngSubmit)="FormSubmit()">
+<form *ngIf="!Success" [formGroup]="Form" (ngSubmit)="FormSubmit()">
     <div class="field-wrapper">
         <label class="title">Name *</label>
         <div class="form-field field-left">
@@ -20,3 +20,13 @@
     </div>
     <button type="submit">Submit</button>
 </form>
+
+<div *ngIf="Success">
+    <h3>Thank you for you message!</h3>
+    <p><span>Name: </span>{{this.FullName}}</p>
+    <p><span>Email: </span>{{this.Email}}</p>
+    <p>
+        <span>Message: </span>
+        {{this.Message}}
+    </p>
+</div>

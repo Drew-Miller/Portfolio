@@ -2,8 +2,8 @@
     <div class="content-center">
         <h2>Contact Me!</h2>
         <p>Call me at (509) 793-3710</p>
-        <p>Or fill the form to contact me:</p>
-        <email></email>
+        <p *ngIf="!EmailSuccess">Or fill the form to contact me:</p>
+        <email (onSuccess)="EmailSuccess = $event" [ngClass]="{ 'buffer' : EmailSuccess }"></email>
         <div class="clearfix"></div>
     </div>
 </div>

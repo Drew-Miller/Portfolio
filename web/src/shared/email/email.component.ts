@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -8,8 +8,12 @@ import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
     styleUrls: ['./email.component.scss']
 })
 export class EmailComponent implements OnInit {
+    @Output('onSuccess') onSuccess = new EventEmitter<boolean>();
     public Form: FormGroup;
-    private success = false;
+    public Success = false;
+    public FullName = '';
+    public Email = '';
+    public Message = '';
     private readonly subject = 'From: Portfolio Contact';
     private readonly emailPattern = '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$';
     private readonly postUrl = 'https://formspree.io/mdolnleo';
@@ -38,9 +42,9 @@ export class EmailComponent implements OnInit {
 
         const firstName = this.Form.value.FirstName;
         const lastName = this.Form.value.LastName;
-        const fullName = firstName + ' ' + lastName;
-        const emailAddress = this.Form.value.Email;
-        const messageBody = this.Form.value.Message;
+        const fullName = this.FullName =  firstName + ' ' + lastName;
+        const emailAddress = this.Email = this.Form.value.Email;
+        const messageBody = this.Message = this.Form.value.Message;
 
         this.httpClient.post(this.postUrl, {
             _subject: this.subject,
@@ -49,7 +53,7 @@ export class EmailComponent implements OnInit {
             message: messageBody
         }).subscribe({
             complete: () => {
-                this.success = true;
+                this.onSuccess.emit(this.Success = true);
             }
         });
     }
