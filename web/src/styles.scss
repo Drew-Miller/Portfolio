@@ -33,11 +33,6 @@ header, footer {
     position: static;
 }
 
-main {
-  height: 100vh;
-
-}
-
 a:link {
   text-decoration: none;
 }
@@ -120,6 +115,12 @@ button[type=submit]:focus {
     outline: none;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background-color: $background-color-light;
+}
+
 .body-margin {
   padding-left: 3vw;
   padding-right: 3vw;
@@ -179,6 +180,10 @@ button[type=submit]:focus {
   * {
     margin-left: $margin-size-small;
   }
+}
+
+.color-light {
+  color: $font-color-light;
 }
 
 @media only screen and (max-width: $screen-size-small) {

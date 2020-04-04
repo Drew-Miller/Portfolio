@@ -1,6 +1,10 @@
 @import 'src/assets/scss/_variables.scss';
 @import 'src/assets/scss/_mixins.scss';
 
+:host {
+    height: 100vh;
+}
+
 .content {
     width: 60vw;
 }

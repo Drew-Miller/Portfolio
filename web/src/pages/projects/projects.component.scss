@@ -25,12 +25,20 @@ img {
     order: 0;
 }
 
-.text-container {
-    display: table;
-    vertical-align: middle;
+.content-section {
+    text-align: center;
+    width: calc(#{$screen-size-small} * .65);
+    margin-bottom: 80px!important;
 }
 
-.text-center {
-    display: table-cell;
-    vertical-align: middle;
+@media only screen and (max-width: $screen-size-small) {
+    .content-section {
+        width: calc(#{$screen-size-mobile} * .9);
+    }
+}
+
+@media only screen and (max-width: $screen-size-mobile) {
+    .content-section {
+        width: 90%;
+    }
 }
