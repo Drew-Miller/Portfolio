@@ -7,7 +7,8 @@
             <ul class="horizontal">
                 <ng-container *ngFor="let item of NavItems">
                 <li>
-                    <a (click)="Navigate(item.Link)"
+                    <a (click)="Navigate($event, item.Link)"
+                        [href]="item.Link"
                         [class.curr-active-link]="item.Link === CurrentRoute">
                         {{ item.Title }}
                     </a>

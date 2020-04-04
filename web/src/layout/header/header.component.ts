@@ -15,7 +15,8 @@ export class HeaderComponent {
 
     public constructor(private router: Router) { }
 
-    public Navigate(path: string) {
+    public Navigate(ev: Event, path: string) {
+        ev.preventDefault();
         this.router.navigateByUrl(path);
     }
 
