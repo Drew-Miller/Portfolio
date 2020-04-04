@@ -1,8 +1,6 @@
 @import 'src/assets/scss/_variables.scss';
 @import 'src/assets/scss/_mixins.scss';
 
-$size-big: 200px;
-
 .header-spacing {
     padding-top: 3vh;
     padding-bottom: 3vh;
@@ -17,19 +15,19 @@ $size-big: 200px;
 }
 
 nav {
-    height: $size-big;
+    height: $logo-size-big;
     max-width: 75%;
     float: right;
 }
 
 .header-logo {
     float: left;
-    width: $size-big;
+    width: $logo-size-big;
 }
 
 #logo {
-    height: $size-big;
-    width: $size-big;
+    height: $logo-size-big;
+    width: $logo-size-big;
 }
 
 .curr-active-link {

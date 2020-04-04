@@ -1,15 +1,13 @@
 @import 'src/assets/scss/_variables.scss';
 @import 'src/assets/scss/_mixins.scss';
 
-.container {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
+.content {
+    width: 60vw;
 }
 
 .portrait {
+    @extend .content;
     width: 40vw;
-    height: 100vh;
     overflow: hidden;
 }
 
@@ -32,10 +30,6 @@
 }
 
 @media only screen and (max-width: $screen-size-small) {
-    .container {
-        display: block;
-    }
-
     .portrait {
         display: table;
         width: 100%;
@@ -46,13 +40,5 @@
     #selfie {
         min-height: 35vh;
         background-position: 50% 35%;
-    }
-
-    .content {
-        display: table;
-        width: 100%;
-        height: auto;
-        min-height: 65vh;
-        @include center-all-mixin;
     }
 }

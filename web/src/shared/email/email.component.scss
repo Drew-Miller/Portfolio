@@ -5,14 +5,6 @@
     display: block;
 }
 
-input {
-    display: block;
-}
-
-label {
-    display: inline-block;
-}
-
 .field-wrapper, .form-field {
     position: relative;
     display: inline-block;
@@ -45,51 +37,18 @@ label {
 
 .field-element, .sub-label {
     color: $font-color-p;
-    border: 1px solid rgba($font-color-dark, 0.2);
     font-weight: 400;
 }
 
 .field-element {
     font-size: $font-size-med;
     width: 100%;
+    border: 1px solid rgba($font-color-dark, 0.2);
     box-sizing: border-box;
 }
 
 .sub-label {
     font-size: $font-size-small;
-}
-
-button[type=submit] {
-    border: 0;
-    transition: all 0.25s ease-in-out;
-    padding: 10px;
-    border-radius: 0;
-    cursor: pointer;
-    color: $font-color-p;
-    background-color: $background-color-light;
-    font-size: $font-size-med;
-    line-height: 1.8em;
-}
-
-button[type=submit]:hover {
-    background-color: $background-color-dark;
-}
-
-input[type=text] {
-    line-height: 21px;
-    padding: 10px;
-    vertical-align: middle;
-}
-
-textarea {
-    min-height: 100px;
-    resize: vertical;
-}
-
-input[type=text]:focus,
-textarea:focus,
-button[type=submit]:focus {
-    outline: none;
 }
 
 @media only screen and (max-width: $screen-size-small) {

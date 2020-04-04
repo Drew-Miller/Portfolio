@@ -1,0 +1,33 @@
+@import 'src/assets/scss/_variables.scss';
+@import 'src/assets/scss/_mixins.scss';
+
+$angular-logo-size: calc(#{$logo-size-small} * 19 / 15);
+
+#angular {
+    height: $angular-logo-size;
+    margin-left: calc((#{$logo-size-small} - #{$angular-logo-size}) / 2);
+}
+
+#net_core {
+    height: $logo-size-small;
+}
+
+#ef_core {
+    height: $logo-size-small;
+    border-radius: 50%;
+}
+
+
+img {
+    order: 0;
+}
+
+.text-container {
+    display: table;
+    vertical-align: middle;
+}
+
+.text-cell {
+    display: table-cell;
+    vertical-align: middle;
+}

@@ -33,8 +33,9 @@ header, footer {
     position: static;
 }
 
-label {
-  border: none;
+main {
+  height: 100vh;
+
 }
 
 a:link {
@@ -58,8 +59,11 @@ ul {
     margin: 0px;
     list-style-type: none;
     position: relative;
-    display: flex;
     text-align: left;
+}
+
+ul.horizontal {
+  display: flex;
 }
 
 li {
@@ -74,16 +78,63 @@ a, span {
     fill: $font-color-light;
 }
 
+input {
+  display: block;
+}
+
+label {
+  display: inline-block;
+  border: none;
+}
+
+input[type=text] {
+  line-height: 21px;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button {
+  border: 0;
+  transition: all 0.25s ease-in-out;
+  padding: 10px;
+  border-radius: 0;
+  cursor: pointer;
+  color: $font-color-p;
+  background-color: $background-color-light;
+  font-size: $font-size-med;
+  line-height: 1.8em;
+}
+
+button:hover {
+  background-color: $background-color-dark;
+}
+
+input[type=text]:focus,
+textarea:focus,
+button[type=submit]:focus {
+    outline: none;
+}
+
 .body-margin {
   padding-left: 3vw;
   padding-right: 3vw;
 }
 
+.dividing-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
 .content {
   display: table;
-  width: 60vw;
+  width: 100%;
   height: 100vh;
-  margin: auto;
 }
 
 .content-center {
@@ -107,15 +158,37 @@ a, span {
   @include center-all-mixin;
 }
 
+.flex-left {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 @media only screen and (max-width: $screen-size-small) {
-  ul {
+  ul.horizontal {
     display: flex;
     text-align: left;
+  }
+  
+  .dividing-container {
+    display: block;
+
+    .content {
+      display: table;
+      width: 100%!important;
+      height: auto;
+      min-height: 65vh;
+      @include center-all-mixin;
+    }
   }
 }
 
 @media only screen and (max-width: $screen-size-mobile) {
-    ul {
+    ul.horizontal {
       display: block;
       text-align: center;
     }
