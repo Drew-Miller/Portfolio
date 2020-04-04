@@ -5,6 +5,10 @@
     width: 60vw;
 }
 
+.content-margin {
+    max-width: 640px!important;
+}
+
 .portrait {
     @extend .content;
     width: 40vw;
@@ -21,12 +25,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 60%;
-}
-
-.text {
-    margin: 40px auto;
-    max-width: 640px!important;
-    line-height: 1.8em;
 }
 
 @media only screen and (max-width: $screen-size-small) {

@@ -146,6 +146,11 @@ button[type=submit]:focus {
   padding-right: 4vw;
 }
 
+.content-margin {
+  margin: 40px auto;
+  line-height: 1.8em;
+}
+
 .clearfix {
     clear: both;
 }
@@ -161,11 +166,19 @@ button[type=submit]:focus {
 .flex-left {
   display: flex;
   flex-direction: row;
+
+  * {
+    margin-right: $margin-size-small;
+  }
 }
 
 .flex-right {
   display: flex;
   flex-direction: row-reverse;
+
+  * {
+    margin-left: $margin-size-small;
+  }
 }
 
 @media only screen and (max-width: $screen-size-small) {

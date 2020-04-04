@@ -17,6 +17,9 @@ $angular-logo-size: calc(#{$logo-size-small} * 19 / 15);
     border-radius: 50%;
 }
 
+li.flex-left, li.flex-right {
+    align-items: center;
+}
 
 img {
     order: 0;
