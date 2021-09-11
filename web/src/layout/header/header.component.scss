@@ -1,4 +1,3 @@
-@import 'src/assets/scss/_variables.scss';
 @import 'src/assets/scss/_mixins.scss';
 
 .header-spacing {
@@ -15,26 +14,26 @@
 }
 
 nav {
-    height: $logo-size-big;
+    height: 200px;
     max-width: 75%;
     float: right;
 }
 
 .header-logo {
     float: left;
-    width: $logo-size-big;
+    width: 200px;
 }
 
 #logo {
-    height: $logo-size-big;
-    width: $logo-size-big;
+    height: 200px;
+    width: 200px;
 }
 
 .curr-active-link {
-    color: #{$font-color-dark}!important;
+    color: #020202!important;
 }
 
-@media only screen and (max-width: $screen-size-small) {
+@media only screen and (max-width: 980px) {
     nav, .header-logo {
         float: none;
         margin: auto;
@@ -45,7 +44,7 @@ nav {
     }
 }
 
-@media only screen and (max-width: $screen-size-mobile) {
+@media only screen and (max-width: 494px) {
     nav {
         flex-direction: column;
     }

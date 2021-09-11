@@ -1,4 +1,3 @@
-@import 'src/assets/scss/_variables.scss';
 @import 'src/assets/scss/_mixins.scss';
 
 :host {
@@ -36,22 +35,21 @@
 }
 
 .field-element, .sub-label {
-    color: $font-color-p;
+    color: #777777;
     font-weight: 400;
 }
 
 .field-element {
-    font-size: $font-size-med;
     width: 100%;
-    border: 1px solid rgba($font-color-dark, 0.2);
+    border: 1px solid rgba(#020202, 0.2);
     box-sizing: border-box;
 }
 
 .sub-label {
-    font-size: $font-size-small;
+    font-size: 11px;
 }
 
-@media only screen and (max-width: $screen-size-small) {
+@media only screen and (max-width: 494px) {
     %split-field {
         width: 100%!important;
         margin-left: 0;

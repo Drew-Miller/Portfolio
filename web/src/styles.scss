@@ -1,27 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(https://fonts.googleapis.com/css?family=Work+Sans);
-@import "src/assets/scss/_variables.scss";
 @import "src/assets/scss/_mixins.scss";
 
 * {
   box-sizing: border-box;
   font-family: Work Sans, sans-serif;
-  color: $font-color-title;
+  color: #333333;
   font-weight: 400;
+  font-size: 14px;
 }
 
 body {
   margin: 0px;
 }
 
+p, i {
+  color: #777777;
+}
+
 p {
-  font-size: $font-size-med;
-  color: $font-color-p;
+  font-size: 14px;
 }
 
 i {
   cursor: pointer;
-  color: $font-color-p;
 }
 
 h2 {
@@ -72,8 +74,8 @@ span {
   padding: 8px 0.5em 9px;
   margin: 0;
   font-size: 12px;
-  color: $font-color-light;
-  fill: $font-color-light;
+  color: #bababa;
+  fill: #bababa;
 }
 
 input {
@@ -102,14 +104,14 @@ button {
   padding: 10px;
   border-radius: 0;
   cursor: pointer;
-  color: $font-color-p;
-  background-color: $background-color-light;
-  font-size: $font-size-med;
+  color: #777777;
+  background-color: #e6e6e6;
+  font-size: 14px;
   line-height: 1.8em;
 }
 
 button:hover {
-  background-color: $background-color-dark;
+  background-color: #bababa
 }
 
 input[type="text"]:focus,
@@ -121,7 +123,7 @@ button[type="submit"]:focus {
 hr {
   border: none;
   height: 1px;
-  background-color: $background-color-light;
+  background-color: #bababa;
 }
 
 .body-margin {
@@ -170,7 +172,7 @@ hr {
   flex-direction: row;
 
   * {
-    margin-right: $margin-size-small;
+    margin-right: 14px;
   }
 }
 
@@ -179,15 +181,11 @@ hr {
   flex-direction: row-reverse;
 
   * {
-    margin-left: $margin-size-small;
+    margin-left: 14px;
   }
 }
 
-.color-light {
-  color: $font-color-light;
-}
-
-@media only screen and (max-width: $screen-size-small) {
+@media only screen and (max-width: 980px) {
   ul.horizontal {
     display: flex;
     text-align: left;
@@ -206,7 +204,7 @@ hr {
   }
 }
 
-@media only screen and (max-width: $screen-size-mobile) {
+@media only screen and (max-width: 494px) {
   ul.horizontal {
     display: block;
     text-align: center;

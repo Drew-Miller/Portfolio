@@ -1,4 +1,3 @@
-@import 'src/assets/scss/_variables.scss';
 @import 'src/assets/scss/_mixins.scss';
 
 footer {
@@ -10,8 +9,8 @@ footer {
 }
 
 p, a {
-    font-size: $font-size-med;
-    color: $font-color-light;
+    font-size: 14px;
+    color: #e6e6e6;
 }
 
 .footer-item {
@@ -19,14 +18,14 @@ p, a {
     padding-left: 15px;
 }
 
-@media only screen and (max-width: $screen-size-small) {
+@media only screen and (max-width: 980px) {
     footer {
         @include center-all-mixin;
         flex-direction: row;
     }
 }
 
-@media only screen and (max-width: $screen-size-mobile) {
+@media only screen and (max-width: 494px) {
     footer {
         flex-direction: column-reverse;
     }

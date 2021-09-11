@@ -1,6 +1,6 @@
-@import 'src/assets/scss/_variables.scss';
 @import 'src/assets/scss/_mixins.scss';
 
+$logo-size-small: 100px;
 $angular-logo-size: calc(#{$logo-size-small} * 19 / 15);
 
 #angular {
@@ -27,17 +27,17 @@ img {
 
 .content-section {
     text-align: center;
-    width: calc(#{$screen-size-small} * .65);
+    width: 300px;
     margin-bottom: 80px!important;
 }
 
-@media only screen and (max-width: $screen-size-small) {
+@media only screen and (max-width: 980px) {
     .content-section {
-        width: calc(#{$screen-size-mobile} * .9);
+        width: 450px
     }
 }
 
-@media only screen and (max-width: $screen-size-mobile) {
+@media only screen and (max-width: 494px) {
     .content-section {
         width: 90%;
     }
