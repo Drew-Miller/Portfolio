@@ -1,12 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(https://fonts.googleapis.com/css?family=Work+Sans);
-@import 'src/assets/scss/_variables.scss';
-@import 'src/assets/scss/_mixins.scss';
+@import "src/assets/scss/_variables.scss";
+@import "src/assets/scss/_mixins.scss";
 
 * {
-    font-family: Work Sans, sans-serif;
-    color: $font-color-title;
-    font-weight: 400;
+  box-sizing: border-box;
+  font-family: Work Sans, sans-serif;
+  color: $font-color-title;
+  font-weight: 400;
 }
 
 body {
@@ -28,9 +29,10 @@ h2 {
   margin: 1rem 0 2rem;
 }
 
-header, footer {
-    display: block;
-    position: static;
+header,
+footer {
+  display: block;
+  position: static;
 }
 
 a:link {
@@ -50,11 +52,11 @@ a:active {
 }
 
 ul {
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
-    position: relative;
-    text-align: left;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  position: relative;
+  text-align: left;
 }
 
 ul.horizontal {
@@ -62,15 +64,16 @@ ul.horizontal {
 }
 
 li {
-    margin: 0 2px;
+  margin: 0 2px;
 }
 
-a, span {
-    padding: 8px .5em 9px;
-    margin: 0;
-    font-size: 12px;
-    color: $font-color-light;
-    fill: $font-color-light;
+a,
+span {
+  padding: 8px 0.5em 9px;
+  margin: 0;
+  font-size: 12px;
+  color: $font-color-light;
+  fill: $font-color-light;
 }
 
 input {
@@ -82,7 +85,7 @@ label {
   border: none;
 }
 
-input[type=text] {
+input[type="text"] {
   line-height: 21px;
   padding: 10px;
   vertical-align: middle;
@@ -109,10 +112,10 @@ button:hover {
   background-color: $background-color-dark;
 }
 
-input[type=text]:focus,
+input[type="text"]:focus,
 textarea:focus,
-button[type=submit]:focus {
-    outline: none;
+button[type="submit"]:focus {
+  outline: none;
 }
 
 hr {
@@ -133,13 +136,11 @@ hr {
 }
 
 .content {
-  display: table;
   width: 100%;
-  height: 100vh;
+  min-height: 65vh;
 }
 
 .content-center {
-  display: table-cell;
   width: 100%;
   position: relative;
   vertical-align: middle;
@@ -153,11 +154,11 @@ hr {
 }
 
 .clearfix {
-    clear: both;
+  clear: both;
 }
 
 .center-vertical {
-    @include center-vertical-mixin;
+  @include center-vertical-mixin;
 }
 
 .center-all {
@@ -191,13 +192,13 @@ hr {
     display: flex;
     text-align: left;
   }
-  
+
   .dividing-container {
     display: block;
 
     .content {
       display: table;
-      width: 100%!important;
+      width: 100% !important;
       height: auto;
       min-height: 65vh;
       @include center-all-mixin;
@@ -206,8 +207,8 @@ hr {
 }
 
 @media only screen and (max-width: $screen-size-mobile) {
-    ul.horizontal {
-      display: block;
-      text-align: center;
-    }
+  ul.horizontal {
+    display: block;
+    text-align: center;
+  }
 }
