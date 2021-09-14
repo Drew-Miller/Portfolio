@@ -1,0 +1,40 @@
+<form *ngIf="success === undefined" [formGroup]="form" (ngSubmit)="submit()">
+  <div class="field-wrapper">
+    <label class="input-title">Name *</label>
+    <div class="form-field field-left">
+      <input type="text" formControlName="firstName" class="field-element">
+      <label class="sub-label">First Name</label>
+    </div>
+    <div class="form-field field-right">
+      <input type="text" formControlName="lastName" class="field-element">
+      <label class="sub-label">Last Name</label>
+    </div>
+  </div>
+  <div class="form-field">
+    <label class="input-title">Email *</label>
+    <input type="text" formControlName="email" class="field-element">
+  </div>
+  <div class="form-field">
+    <label class="input-title">Message: *</label>
+    <textarea formControlName="message" class="field-element"></textarea>
+  </div>
+  <button style="margin-left: 40px;" type="submit" [disabled]="!form.valid">Submit</button>
+</form>
+
+<div *ngIf="success">
+  <h3>Thank you for you message!</h3>
+  <p><span>Name: </span>{{this.name}}</p>
+  <p><span>Email: </span>{{this.email}}</p>
+  <p>
+    <span>Message: </span>
+    {{this.message}}
+  </p>
+</div>
+
+<div *ngIf="!success && success !== undefined">
+  <h3>Uh Oh...an error occurred.</h3>
+  <p>
+    <span>Message: </span>
+    {{this.message}}
+  </p>
+</div>

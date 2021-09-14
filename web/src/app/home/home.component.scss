@@ -1,0 +1,49 @@
+:host {
+    height: 100vh;
+}
+
+.content {
+    width: 60vw;
+}
+
+.content-margin {
+    max-width: 640px!important;
+}
+
+.portrait {
+    @extend .content;
+    width: 40vw;
+    overflow: hidden;
+}
+
+#selfie {
+    width: 100%;
+    height: 100vh;
+    border: 30px ​solid transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#selfie.one {
+    background-image: url('src/assets/images/selfie.jpeg');
+    background-position: 50% 60%;
+}
+
+#selfie.two {
+    background-image: url('src/assets/images/selfie_2.png');
+    background-position: 65% 30%;
+}
+
+@media only screen and (max-width: 980px) {
+    .portrait {
+        display: table;
+        width: 100%;
+        height: auto;
+        min-height: 35vh;
+    }
+
+    #selfie {
+        min-height: 35vh;
+        background-position: 50% 35%;
+    }
+}
