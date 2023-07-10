@@ -1,5 +1,4 @@
 <script lang="ts">
-  import basePath from "$app/paths";
   let currDate = new Date();
 </script>
 
@@ -24,23 +23,23 @@
     
           <div class="mt-10 mb-10 font-[Arial] font-thin tracking-widest flex flex-col sm:flex-row sm:items-center sm:space-x-8">
             <a href="https://github.com/Drew-Miller" class="flex items-center space-x-2">
-              <img src="{basePath}/github.svg" alt="Github" class="h-5"/>
+              <img src="github.svg" alt="Github" class="h-5"/>
               <p>Github</p>
             </a>
             
             <a href="https://www.linkedin.com/in/drewmiller-software" class="flex items-center space-x-2">
-              <img src="{basePath}/linkedin.svg" alt="LinkedIn" class="h-5"/>
+              <img src="linkedin.svg" alt="LinkedIn" class="h-5"/>
               <p>LinkedIn</p>  
             </a>
 
             <a href="mailto:drew.miller.software@gmail.com" class="flex items-center space-x-2">
-              <img src="{basePath}/envelope-solid.svg" alt="Email" class="h-5"/>
+              <img src="envelope-solid.svg" alt="Email" class="h-5"/>
               <p>Email</p>  
             </a>
           </div>
 
           <button class="bg-[#47bec7] hover:bg-[#35aeb6] text-white font-bold py-2 px-4 rounded mb-16">
-            <a href="/drew-miller-resume.pdf" class="text-black">Resume</a>
+            <a href="drew-miller-resume.pdf" class="text-black">Resume</a>
           </button>
 
           <p class="font-[Arial] text-[#848d96] text-xs font-thin opacity-40">©{currDate.getFullYear()} Drew Miller</p>
@@ -54,7 +53,7 @@
 
 <style>
   .my-selfie {
-    background-image: url('/selfie.png');
+    background-image: url('selfie.png');
     background-size: cover;
     background-position: center;
   }
