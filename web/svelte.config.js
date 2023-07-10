@@ -24,9 +24,6 @@ const config = {
 		}),
 		paths: {
 			base: production ? '/Portfolio' : ""
-		},
-		prerender: {
-			entries: []
 		}
 	}
 };
