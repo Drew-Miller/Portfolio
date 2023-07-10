@@ -19,7 +19,10 @@ const config = {
 			fallback: null,
 			precompress: false,
 			strict: false
-		})
+		}),
+		paths: {
+			base: process.env.NODE_ENV === 'production' ? '/Portfolio' : '',
+		}
 	}
 };
 
