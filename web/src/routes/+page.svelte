@@ -49,13 +49,12 @@
     </div>
   </div>
 
-  <div class="my-selfie md:min-h-screen min-h-[80vh] md:w-1/2 w-full"></div>
+  <div class="my-selfie md:min-h-screen min-h-[80vh] md:w-1/2 w-full" style="background-image:url(selfie.png)"></div>
 </div>
 
 <style>
   .my-selfie {
-    /* background-image: url('selfie.png');
     background-size: cover;
-    background-position: center; */
+    background-position: center;
   }
 </style>
