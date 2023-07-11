@@ -54,8 +54,8 @@
 
 <style>
   .my-selfie {
-    background-image: url('selfie.png');
+    /* background-image: url('selfie.png');
     background-size: cover;
-    background-position: center;
+    background-position: center; */
   }
 </style>
