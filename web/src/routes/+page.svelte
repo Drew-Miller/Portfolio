@@ -8,7 +8,7 @@
     class="min-h-screen md:w-1/2 w-full overflow-auto flex align-middle justify-center bg-[#291b4a] text-[#CCCCCC]"
   >
     <div class="mt-auto mb-auto max-w-[90%]">
-      <div class=" p-16">
+      <div class="p-4 md:p-16">
         <h1
           class="mb-10 uppercase text-[#47bec7] text-lg font-thin tracking-widest font-[ABeeZee]"
         >
