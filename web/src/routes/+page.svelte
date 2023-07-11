@@ -16,10 +16,14 @@
         </h1>
 
         <h2
-          class="mb-20 xl:text-6xl text-4xl font-semibold leading-[1.5] font-[ABeeZee]"
+          class="xl:text-6xl text-4xl font-semibold leading-[1.5] font-[ABeeZee]"
         >
           Developer. Designer. Techonologist
         </h2>
+
+        <div class="flex md:hidden my-12 w-64 m-auto">
+          <div class="selfie-sm bg-cover bg-center bg-no-repeat flex-1 m-[1%] rounded-full" style="background-image:url(selfie.png)" />
+        </div> 
 
         <div class="text-[#848d96]">
           <p
@@ -78,14 +82,14 @@
   </div>
 
   <div
-    class="my-selfie md:min-h-screen min-h-[80vh] md:w-1/2 w-full"
-    style="background-image:url(selfie.png)"
+    class="hidden md:block min-h-[80vh] w-1/2 bg-cover bg-center bg-no-repeat" style="background-image:url(selfie.png)"
   />
 </div>
 
 <style>
-  .my-selfie {
-    background-size: cover;
-    background-position: center;
+  .selfie-sm:before {
+    content: "";
+    display: inline-block;
+    padding-top: 100%;
   }
 </style>
